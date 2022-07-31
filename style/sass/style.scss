@@ -5,7 +5,7 @@
 
 body {
     font-family: pixel;
-    background-color: gray;
+    background-color: #222;
 }
 
 html {
@@ -21,7 +21,7 @@ html {
 }
 
 section {
-    background-color: grey;
+    background-color: #222;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -44,7 +44,7 @@ section {
             padding-left: 2.5rem;
             font-size: 5rem;
             cursor: pointer;
-            color: gray;
+            color: #222;
             &:hover {
                 outline: 4px solid black;
                 transition: all ease-in-out .3s;
@@ -71,19 +71,21 @@ section {
     .number {
         font-size: 2rem;
         font-family: inherit;
-        color: gray;
+        color: #222;
         position: absolute;
         background-color: white;
-        padding: 1rem;
+        padding: 1rem 1.4rem;
         border-radius: 50%;
+        text-align: center;
         left: 50%;
-        top: 35%;
+        right: 50%;
+        top: 35vh;
     }
     .icon {
         font-style: normal;
         font-size: 2rem;
         font-family: inherit;
-        color: gray;
+        color: #222;
         position: absolute;
         background-color: white;
         padding: 1rem;
@@ -138,7 +140,7 @@ section {
                 font-size: 2.5rem;
                 background-color: white;
                 cursor: pointer;
-                color: gray;
+                color: #222;
                 font-family: inherit;
                 border: none;
                 margin: auto;
@@ -153,13 +155,17 @@ section {
 
 @media (max-width:480px) {
     .icon {
-        margin-top: 5rem;
-        margin-right: 5rem;
+        margin-bottom: 3rem;
+        position: absolute;
+        padding-bottom: 4rem;
+    }
+    .sec {
+        margin-top: 4rem;
     }
     .number {
         display: none;
     }
     section {
-        height: 100%;
+        height: 100vh;
     }
 }
