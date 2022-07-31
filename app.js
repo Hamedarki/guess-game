@@ -3,6 +3,7 @@
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highScore = 0;
 
 document.querySelector(".again").addEventListener("click", function() {
     score = 20;
@@ -33,13 +34,18 @@ document.querySelector(".check").addEventListener("click", function() {
 
 
     } else if (guess === secretNumber) {
+        if (score > highScore) {
+            highScore = score;
+            document.querySelector(".highScore").textContent = `high Score: ${highScore}`;
+        }
         if (score > 1) {
             document.querySelector(".message").textContent = "Correct Number🎉🎉";
             document.querySelector(".number").style.display = "none";
             document.querySelector(".icon").style.display = "block";
             document.querySelector(".section").style.background = "#60b347";
+
         } else {
-            document.querySelector(".score").textContent = `its late my friend💔`
+            document.querySelector(".score").textContent = `its late my friend💔`;
             document.querySelector(".section").style.background = "red";
         }
 
