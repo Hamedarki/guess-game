@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "pixel";
+  src: url("../fonts/ARCADECLASSIC.TTF");
+}
+body {
+  font-family: pixel;
+  background-color: gray;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-size: 2rem;
+}
+section .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+section .top button {
+  background-color: white;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  text-align: center;
+  padding-left: 2.5rem;
+  font-size: 5rem;
+  cursor: pointer;
+  color: gray;
+}
+section .top button:hover {
+  outline: 4px solid black;
+  transition: all ease-in-out 0.3s;
+}
+section .top p {
+  color: white;
+  word-spacing: 1rem;
+}
+section .line {
+  width: 100vw;
+  height: 1vh;
+  background-color: white;
+}
+section .my-number {
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+}
+section .number {
+  font-size: 2rem;
+  font-family: inherit;
+  color: gray;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  left: 50%;
+  top: 35%;
+}
+section .icon {
+  font-style: normal;
+  font-size: 2rem;
+  font-family: inherit;
+  color: gray;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  left: 50%;
+  top: 35%;
+}
+section .sec {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+section .sec .sec-one {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2.5rem;
+  word-spacing: 1.3rem;
+  color: white;
+}
+section .sec .sec-one .message {
+  margin-bottom: 6rem;
+}
+section .sec .sec-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
+}
+section .sec .sec-two .input {
+  width: 50%;
+  height: 10%;
+  font-family: inherit;
+  padding: 0.5rem;
+  background-color: inherit;
+  border: 3px solid white;
+  cursor: pointer;
+  outline: none;
+  font-size: 2.8rem;
+  color: white;
+  text-align: center;
+}
+section .sec .sec-two .input::selection {
+  background-color: black;
+}
+section .sec .sec-two .check {
+  width: 25%;
+  height: 8%;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+  background-color: white;
+  cursor: pointer;
+  color: gray;
+  font-family: inherit;
+  border: none;
+  margin: auto;
+}
+section .sec .sec-two .check:hover {
+  outline: 3px solid black;
+  transition: all ease-in-out 0.3s;
+}
+
+@media (max-width: 480px) {
+  .icon {
+    margin-top: 5rem;
+    margin-right: 5rem;
+  }
+
+  .number {
+    display: none;
+  }
+
+  section {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
