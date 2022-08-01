@@ -78,9 +78,9 @@ document.querySelector(".check").addEventListener("click", function() {
         }
 
 
-    } else if (guess > secretNumber) {
+    } else if (guess !== secretNumber) {
         if (score > 1) {
-            displayMessage("Too High 📈");
+            displayMessage(guess > secretNumber ? "Too High 📈" : "Too low📉");
             score--;
             document.querySelector(".score").textContent = `score: ${score}`;
         } else {
@@ -89,17 +89,28 @@ document.querySelector(".check").addEventListener("click", function() {
 
         }
 
+        // } else if (guess > secretNumber) {
+        //     if (score > 1) {
+        //         displayMessage("Too High 📈");
+        //         score--;
+        //         document.querySelector(".score").textContent = `score: ${score}`;
+        //     } else {
+        //         displayMessage(`you are lost the game💥`);
+        //         document.querySelector(".section").style.background = "red";
 
-    } else if (guess < secretNumber) {
-        if (score > 1) {
-            displayMessage("Too low📉");
-            score--;
-            document.querySelector(".score").textContent = `score: ${score}`;
-        } else {
-            displayMessage(`you are lost the game💥`);
-            document.querySelector(".section").style.background = "red";
+        //     }
 
-        }
+
+        // } else if (guess < secretNumber) {
+        //     if (score > 1) {
+        //         displayMessage("Too low📉");
+        //         score--;
+        //         document.querySelector(".score").textContent = `score: ${score}`;
+        //     } else {
+        //         displayMessage(`you are lost the game💥`);
+        //         document.querySelector(".section").style.background = "red";
+
+        //     }
 
     }
 });
